@@ -1,0 +1,29 @@
+	<!-- <i class="small material-icons left">arrow_back</i> -->
+	<div class="row">
+		<div class="col s12 m7">
+			<h3 style="text-align: center;">Détails du bien</h3>
+				<div class="card-panel">
+					<div class="card-image">
+		        <img src="data:image/png;base64,{{imageSrc}}" height="300" width="100%">
+		      </div>
+						<mat-tab-group>
+						  <mat-tab label="Détails du biens">
+								<p><B>Nom du bien:</B> {{bien.nombien}}</p>
+			          <p><B>Prix location:</B> {{bien.prixlocation}}</p>
+			          <p><B>Description:</B> {{bien.description}}</p>
+							</mat-tab>
+						  <mat-tab label="Images du biens">
+									<p>
+										<img (click)="this.imageSrc=img.image" *ngFor="let img of bien.images" src="data:image/png;base64,{{img.image}}" id="imageDetail">
+									</p>
+							</mat-tab>
+						</mat-tab-group>
+			  </div>
+		</div>
+		<div class="col s12 m5">
+			<div>
+				<app-form-client></app-form-client>
+			</div>
+
+		</div>
+	</div>

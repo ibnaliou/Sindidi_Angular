@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <form class="col s12" method="post" #form="ngForm" (ngSubmit)="send(form.value)">
+      <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">palette</i>
+            <input id="numpiece" name="numpiece" maxlength="12" required type="number" class="validate" ngModel>
+            <span class="helper-text" data-error="Entrer un numero de piece" data-success=""></span>
+            <label for="numpiece">Votre numero de pièce</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="last_name" required name="nomcomplet" type="text" class="validate" ngModel>
+            <span class="helper-text" data-error="Veuillez entrer votre nom" data-success=""></span>
+            <label for="last_name">Votre nom complet</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">phone</i>
+            <input id="tel" required name="tel" type="number" class="validate" ngModel>
+            <span class="helper-text" data-error="Entrer votre numéro de tel" data-success=""></span>
+            <label for="tel">Votre numero de tel</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">group</i>
+            <input id="prix" required name="adress" type="text" class="validate" ngModel>
+            <span class="helper-text" data-error="Veuillez entrer votre adresse" data-success=""></span>
+            <label for="prix">Votre adresse</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">email</i>
+            <input id="login" required name="email" type="email" class="validate" ngModel>
+            <span class="helper-text" data-error="Veuillez entrer un email" data-success=""></span>
+            <label for="login">Votre email</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">lock</i>
+            <input id="password" required name="motdepasse" type="password" class="validate" ngModel>
+            <span class="helper-text" data-error="Veuillez entrer un mot de passe" data-success=""></span>
+            <label for="password">Votre mot de passe</label>
+          </div>
+      </div>
+          <button class="btn waves-effect waves-light" type="submit" name="action">Enregistrer</button>
+    </form>
+  </div>
+</div>

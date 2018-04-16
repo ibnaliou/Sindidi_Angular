@@ -1,0 +1,33 @@
+<div id="header">
+	<div class="row"></div>
+	<h3 style="text-align: center; color:white; margin-top: 150px">Bienvenue dans mon catalogue de bien</h3>
+	<div id="recherche" class="card">
+		<form style="text-align: center;" #form="ngForm">
+			<mat-form-field>
+			  <mat-select name="type" placeholder="Choisir un type" (change)="test(form.value.type, form.value.localite)" ngModel>
+			    <mat-option *ngFor="let type of Types" [value]="type.id">
+			      {{ type.libelle }}
+			    </mat-option>
+			  </mat-select>
+			</mat-form-field>
+			<mat-form-field>
+				<mat-select name="localite" placeholder="Choisir une localite" (change)="test(form.value.type, form.value.localite)" ngModel>
+					<mat-option *ngFor="let localite of Localites" [value]="localite.id">
+						{{ localite.libelle }}
+					</mat-option>
+				</mat-select>
+			</mat-form-field>
+			<button mat-button type="submit">Rechercher</button>
+		</form>
+	</div>
+	<br>
+</div>
+<h3 style="text-align: center;">Bienvenue dans mon catalogue de bien</h3>
+<div class="row">
+	<div class="col s12 m4" *ngFor="let bien of Biens | paginate: { itemsPerPage: 6, currentPage: p }">
+		<app-bien [bien]="bien"></app-bien>
+	</div>
+</div>
+<div style="text-align: center;">
+	<pagination-controls (pageChange)="p = $event" previousLabel="Précédent" nextLabel="Suivant"></pagination-controls>
+</div>

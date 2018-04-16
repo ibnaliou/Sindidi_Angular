@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">email</i>
+            <input id="last_name" name="nom" type="email" class="validate" ngModel required>
+            <label for="last_name">Votre login</label>
+            <span class="helper-text" data-error="Entrer un email valide" data-success=""></span>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">lock</i>
+            <input id="prix" name="prix" type="password" class="validate" ngModel required>
+            <span class="helper-text" data-error="Entrer un le mot de passe" data-success=""></span>
+            <label for="prix">Votre mot de passe</label>
+          </div>
+      </div>
+          <button class="btn waves-effect waves-light" type="submit" name="action">Enregistrer</button>
+    </form>
+  </div>
+</div>

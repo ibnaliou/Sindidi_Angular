@@ -1,0 +1,20 @@
+<footer class="page-footer warn">
+  <div class="container">
+    
+    </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+   
+    <h3>{{ title }}</h3>
+
+    <!-- this creates a google map on the page with the given lat/lng from -->
+    <!-- the component as the initial center of the map: -->
+    <agm-map [latitude]="lat" [longitude]="lng">
+      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+    © 2018 ibnaliou Creation
+  </div>
+</div>
+
+</footer>

@@ -1,0 +1,16 @@
+<mat-toolbar color="warn">
+  <mat-toolbar-row>
+    <span><a routerLink="/accueil">PREMIUM_IMMOBILIER</a></span>
+
+    <span class="example-spacer"></span>
+
+    <button mat-button><a routerLink="/accueil">Accueil</a></button>
+    <button mat-button><a href="">Ajouter</a></button>
+    <button mat-button [matMenuTriggerFor]="menu">Mon compte</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Connexion</button>
+      <button mat-menu-item>Inscription</button>
+    </mat-menu>
+
+  </mat-toolbar-row>
+</mat-toolbar>

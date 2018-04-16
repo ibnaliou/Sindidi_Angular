@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="data:image/png;base64,{{bien.images[0].image}}" height="200">
+      <span class="card-title">{{ bien.localite.libelle }}</span>
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{bien.type.libelle}}<i class="material-icons right">more_vert</i></span>
+      <p>Prix: {{bien.prixlocation}}fcfa</p>
+      <p class="right"><a routerLink="/detail/{{bien.id}}">Voir les détail<i class="tiny material-icons">arrow_forward</i></a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">{{bien.nombien | uppercase}}<i class="material-icons right">close</i></span>
+      <p>{{bien.description}}.</p>
+    </div>
+</div>
